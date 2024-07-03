@@ -43,9 +43,6 @@ namespace LibraryManagementSystem
             {
                 MessageBox.Show("Please fill all blank fields", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                MainForm mForm = new MainForm();
-                mForm.Show();
-                this.Hide();
             }
             else
             {
