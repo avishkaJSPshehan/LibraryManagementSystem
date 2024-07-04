@@ -15,7 +15,7 @@ namespace LibraryManagementSystem
 {
     public partial class AddBooks : UserControl
     {
-        SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\WINDOWS 10\Documents\library.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\Documents\library.mdf;Integrated Security=True;Connect Timeout=30");
 
         public AddBooks()
         {
@@ -76,10 +76,10 @@ namespace LibraryManagementSystem
                         DateTime today = DateTime.Today;
                         connect.Open();
                         string insertData = "INSERT INTO books " +
-                            "(book_title, author, published_date, status, image, date_insert) " +
-                            "VALUES(@bookTitle, @author, @published_date, @status, @image, @dateInsert)";
+                            "(book_title, author, published_data, status, image, date_insert) " +
+                            "VALUES(@bookTitle, @author, @published_data, @status, @image, @dateInsert)";
 
-                        string path = Path.Combine(@"C:\Users\WINDOWS 10\source\repos\LibraryManagementSystem\LibraryManagementSystem\Books_Directory\" +
+                        string path = Path.Combine(@"D:\Programming Projects\LibraryManagementSystem\LibraryManagementSystem\Books_Directory\" +
                             addBooks_bookTitle.Text + addBooks_author.Text.Trim() + ".jpg");
 
                         string directoryPath = Path.GetDirectoryName(path);
@@ -95,7 +95,7 @@ namespace LibraryManagementSystem
                         {
                             cmd.Parameters.AddWithValue("@bookTitle", addBooks_bookTitle.Text.Trim());
                             cmd.Parameters.AddWithValue("@author", addBooks_author.Text.Trim());
-                            cmd.Parameters.AddWithValue("@published_date", addBooks_published.Value);
+                            cmd.Parameters.AddWithValue("@published_data", addBooks_published.Value);
                             cmd.Parameters.AddWithValue("@status", addBooks_status.Text.Trim());
                             cmd.Parameters.AddWithValue("@image", path);
                             cmd.Parameters.AddWithValue("@dateInsert", today);

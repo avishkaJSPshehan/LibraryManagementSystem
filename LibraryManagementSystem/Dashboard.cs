@@ -14,7 +14,7 @@ namespace LibraryManagementSystem
 {
     public partial class Dashboard : UserControl
     {
-        SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\WINDOWS 10\Documents\library.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\Documents\library.mdf;Integrated Security=True;Connect Timeout=30");
 
         public Dashboard()
         {
@@ -165,6 +165,11 @@ namespace LibraryManagementSystem
         {
             DateTime now = DateTime.Now;
             label8.Text = now.ToString("MM/dd/yyyy");
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
