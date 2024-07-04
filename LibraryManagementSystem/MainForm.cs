@@ -102,15 +102,10 @@ namespace LibraryManagementSystem
         }
 
         private void dashboard1_Load(object sender, EventArgs e)
-        {
+        { 
 
         }
     }
 }
 
 
-// THATS IT FOR THIS VIDEO
-// THANKS FOR WATCHING !! 
-// HOPE YOU LIKE THE VIDEO
-// THANKS FOR THE SUPPORT TO YOUR CHANNEL : )
-// SUBSCRIBE FOR MORE COOL TUTORIAL VIDEOS!! 

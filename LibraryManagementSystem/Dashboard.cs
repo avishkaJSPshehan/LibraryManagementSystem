@@ -141,5 +141,30 @@ namespace LibraryManagementSystem
             }
         }
 
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            
+        }
+
+        private void dashboard_RB_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel7_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Dashboard_Load(object sender, EventArgs e)
+        {
+            DateTime now = DateTime.Now;
+            label8.Text = now.ToString("MM/dd/yyyy");
+        }
     }
 }

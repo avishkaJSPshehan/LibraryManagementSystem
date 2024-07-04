@@ -36,9 +36,7 @@ namespace LibraryManagementSystem
             this.label4 = new System.Windows.Forms.Label();
             this.greet_label = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.addBooks1 = new LibraryManagementSystem.AddBooks();
-            this.issueBooks1 = new LibraryManagementSystem.IssueBooks();
-            this.returnBooks1 = new LibraryManagementSystem.ReturnBooks();
+            this.member_btn = new System.Windows.Forms.Button();
             this.logout_btn = new System.Windows.Forms.Button();
             this.returnBooks_btn = new System.Windows.Forms.Button();
             this.issueBooks_btn = new System.Windows.Forms.Button();
@@ -46,6 +44,9 @@ namespace LibraryManagementSystem
             this.dashboard_btn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dashboard1 = new LibraryManagementSystem.Dashboard();
+            this.addBooks1 = new LibraryManagementSystem.AddBooks();
+            this.issueBooks1 = new LibraryManagementSystem.IssueBooks();
+            this.returnBooks1 = new LibraryManagementSystem.ReturnBooks();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -95,8 +96,9 @@ namespace LibraryManagementSystem
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.DimGray;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(19)))), ((int)(((byte)(20)))));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.member_btn);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.logout_btn);
             this.panel2.Controls.Add(this.returnBooks_btn);
@@ -116,7 +118,7 @@ namespace LibraryManagementSystem
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(65, 654);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
@@ -128,13 +130,13 @@ namespace LibraryManagementSystem
             // 
             this.greet_label.AutoSize = true;
             this.greet_label.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.greet_label.ForeColor = System.Drawing.Color.Black;
+            this.greet_label.ForeColor = System.Drawing.Color.White;
             this.greet_label.Location = new System.Drawing.Point(55, 161);
             this.greet_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.greet_label.Name = "greet_label";
-            this.greet_label.Size = new System.Drawing.Size(160, 24);
+            this.greet_label.Size = new System.Drawing.Size(168, 24);
             this.greet_label.TabIndex = 1;
-            this.greet_label.Text = "Welcome, Admin";
+            this.greet_label.Text = "Welcome | Admin";
             // 
             // panel3
             // 
@@ -148,6 +150,140 @@ namespace LibraryManagementSystem
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1174, 695);
             this.panel3.TabIndex = 2;
+            // 
+            // member_btn
+            // 
+            this.member_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(40)))), ((int)(((byte)(41)))));
+            this.member_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.member_btn.FlatAppearance.BorderSize = 0;
+            this.member_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
+            this.member_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.member_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.member_btn.ForeColor = System.Drawing.Color.White;
+            this.member_btn.Image = global::LibraryManagementSystem.Properties.Resources.follower;
+            this.member_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.member_btn.Location = new System.Drawing.Point(-1, 479);
+            this.member_btn.Margin = new System.Windows.Forms.Padding(4);
+            this.member_btn.Name = "member_btn";
+            this.member_btn.Size = new System.Drawing.Size(293, 55);
+            this.member_btn.TabIndex = 8;
+            this.member_btn.Text = "MEMBERS";
+            this.member_btn.UseVisualStyleBackColor = false;
+            // 
+            // logout_btn
+            // 
+            this.logout_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.logout_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSeaGreen;
+            this.logout_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSeaGreen;
+            this.logout_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logout_btn.ForeColor = System.Drawing.Color.Black;
+            this.logout_btn.Image = global::LibraryManagementSystem.Properties.Resources.icons8_logout_rounded_up_filled_20px;
+            this.logout_btn.Location = new System.Drawing.Point(11, 642);
+            this.logout_btn.Margin = new System.Windows.Forms.Padding(4);
+            this.logout_btn.Name = "logout_btn";
+            this.logout_btn.Size = new System.Drawing.Size(47, 43);
+            this.logout_btn.TabIndex = 6;
+            this.logout_btn.UseVisualStyleBackColor = true;
+            this.logout_btn.Click += new System.EventHandler(this.logout_btn_Click);
+            // 
+            // returnBooks_btn
+            // 
+            this.returnBooks_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(40)))), ((int)(((byte)(41)))));
+            this.returnBooks_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.returnBooks_btn.FlatAppearance.BorderSize = 0;
+            this.returnBooks_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
+            this.returnBooks_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.returnBooks_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.returnBooks_btn.ForeColor = System.Drawing.Color.White;
+            this.returnBooks_btn.Image = global::LibraryManagementSystem.Properties.Resources.icons8_return_32px_3;
+            this.returnBooks_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.returnBooks_btn.Location = new System.Drawing.Point(-1, 416);
+            this.returnBooks_btn.Margin = new System.Windows.Forms.Padding(4);
+            this.returnBooks_btn.Name = "returnBooks_btn";
+            this.returnBooks_btn.Size = new System.Drawing.Size(293, 55);
+            this.returnBooks_btn.TabIndex = 5;
+            this.returnBooks_btn.Text = "RETURN BOOKS";
+            this.returnBooks_btn.UseVisualStyleBackColor = false;
+            this.returnBooks_btn.Click += new System.EventHandler(this.returnBooks_btn_Click);
+            // 
+            // issueBooks_btn
+            // 
+            this.issueBooks_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(40)))), ((int)(((byte)(41)))));
+            this.issueBooks_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.issueBooks_btn.FlatAppearance.BorderSize = 0;
+            this.issueBooks_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
+            this.issueBooks_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.issueBooks_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.issueBooks_btn.ForeColor = System.Drawing.Color.White;
+            this.issueBooks_btn.Image = global::LibraryManagementSystem.Properties.Resources.icons8_book_32px_1;
+            this.issueBooks_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.issueBooks_btn.Location = new System.Drawing.Point(-1, 353);
+            this.issueBooks_btn.Margin = new System.Windows.Forms.Padding(4);
+            this.issueBooks_btn.Name = "issueBooks_btn";
+            this.issueBooks_btn.Size = new System.Drawing.Size(293, 55);
+            this.issueBooks_btn.TabIndex = 4;
+            this.issueBooks_btn.Text = "ISSUE BOOKS";
+            this.issueBooks_btn.UseVisualStyleBackColor = false;
+            this.issueBooks_btn.Click += new System.EventHandler(this.issueBooks_btn_Click);
+            // 
+            // addBooks_btn
+            // 
+            this.addBooks_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(40)))), ((int)(((byte)(41)))));
+            this.addBooks_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.addBooks_btn.FlatAppearance.BorderSize = 0;
+            this.addBooks_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
+            this.addBooks_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.addBooks_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addBooks_btn.ForeColor = System.Drawing.Color.White;
+            this.addBooks_btn.Image = global::LibraryManagementSystem.Properties.Resources.icons8_book_32px;
+            this.addBooks_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.addBooks_btn.Location = new System.Drawing.Point(-1, 290);
+            this.addBooks_btn.Margin = new System.Windows.Forms.Padding(4);
+            this.addBooks_btn.Name = "addBooks_btn";
+            this.addBooks_btn.Size = new System.Drawing.Size(293, 55);
+            this.addBooks_btn.TabIndex = 3;
+            this.addBooks_btn.Text = "ADD BOOKS";
+            this.addBooks_btn.UseVisualStyleBackColor = false;
+            this.addBooks_btn.Click += new System.EventHandler(this.addBooks_btn_Click);
+            // 
+            // dashboard_btn
+            // 
+            this.dashboard_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(40)))), ((int)(((byte)(41)))));
+            this.dashboard_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dashboard_btn.FlatAppearance.BorderSize = 0;
+            this.dashboard_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
+            this.dashboard_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.dashboard_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.dashboard_btn.ForeColor = System.Drawing.Color.White;
+            this.dashboard_btn.Image = global::LibraryManagementSystem.Properties.Resources.icons8_dashboard_32px;
+            this.dashboard_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.dashboard_btn.Location = new System.Drawing.Point(-1, 228);
+            this.dashboard_btn.Margin = new System.Windows.Forms.Padding(4);
+            this.dashboard_btn.Name = "dashboard_btn";
+            this.dashboard_btn.Size = new System.Drawing.Size(293, 55);
+            this.dashboard_btn.TabIndex = 2;
+            this.dashboard_btn.Text = "DASHBOARD";
+            this.dashboard_btn.UseVisualStyleBackColor = false;
+            this.dashboard_btn.Click += new System.EventHandler(this.dashboard_btn_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::LibraryManagementSystem.Properties.Resources.icons8_library_100px;
+            this.pictureBox1.Location = new System.Drawing.Point(77, 34);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(133, 123);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // dashboard1
+            // 
+            this.dashboard1.Location = new System.Drawing.Point(0, 0);
+            this.dashboard1.Margin = new System.Windows.Forms.Padding(5);
+            this.dashboard1.Name = "dashboard1";
+            this.dashboard1.Size = new System.Drawing.Size(1173, 695);
+            this.dashboard1.TabIndex = 3;
+            this.dashboard1.Load += new System.EventHandler(this.dashboard1_Load);
             // 
             // addBooks1
             // 
@@ -172,117 +308,6 @@ namespace LibraryManagementSystem
             this.returnBooks1.Name = "returnBooks1";
             this.returnBooks1.Size = new System.Drawing.Size(1174, 695);
             this.returnBooks1.TabIndex = 0;
-            // 
-            // logout_btn
-            // 
-            this.logout_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.logout_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSeaGreen;
-            this.logout_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSeaGreen;
-            this.logout_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.logout_btn.ForeColor = System.Drawing.Color.Black;
-            this.logout_btn.Image = global::LibraryManagementSystem.Properties.Resources.icons8_logout_rounded_up_filled_20px;
-            this.logout_btn.Location = new System.Drawing.Point(11, 642);
-            this.logout_btn.Margin = new System.Windows.Forms.Padding(4);
-            this.logout_btn.Name = "logout_btn";
-            this.logout_btn.Size = new System.Drawing.Size(47, 43);
-            this.logout_btn.TabIndex = 6;
-            this.logout_btn.UseVisualStyleBackColor = true;
-            this.logout_btn.Click += new System.EventHandler(this.logout_btn_Click);
-            // 
-            // returnBooks_btn
-            // 
-            this.returnBooks_btn.BackColor = System.Drawing.Color.Gray;
-            this.returnBooks_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.returnBooks_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSeaGreen;
-            this.returnBooks_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSeaGreen;
-            this.returnBooks_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.returnBooks_btn.ForeColor = System.Drawing.Color.Black;
-            this.returnBooks_btn.Image = global::LibraryManagementSystem.Properties.Resources.icons8_return_32px_3;
-            this.returnBooks_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.returnBooks_btn.Location = new System.Drawing.Point(11, 416);
-            this.returnBooks_btn.Margin = new System.Windows.Forms.Padding(4);
-            this.returnBooks_btn.Name = "returnBooks_btn";
-            this.returnBooks_btn.Size = new System.Drawing.Size(267, 55);
-            this.returnBooks_btn.TabIndex = 5;
-            this.returnBooks_btn.Text = "RETURN BOOKS";
-            this.returnBooks_btn.UseVisualStyleBackColor = false;
-            this.returnBooks_btn.Click += new System.EventHandler(this.returnBooks_btn_Click);
-            // 
-            // issueBooks_btn
-            // 
-            this.issueBooks_btn.BackColor = System.Drawing.Color.Gray;
-            this.issueBooks_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.issueBooks_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSeaGreen;
-            this.issueBooks_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSeaGreen;
-            this.issueBooks_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.issueBooks_btn.ForeColor = System.Drawing.Color.Black;
-            this.issueBooks_btn.Image = global::LibraryManagementSystem.Properties.Resources.icons8_book_32px_1;
-            this.issueBooks_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.issueBooks_btn.Location = new System.Drawing.Point(11, 353);
-            this.issueBooks_btn.Margin = new System.Windows.Forms.Padding(4);
-            this.issueBooks_btn.Name = "issueBooks_btn";
-            this.issueBooks_btn.Size = new System.Drawing.Size(267, 55);
-            this.issueBooks_btn.TabIndex = 4;
-            this.issueBooks_btn.Text = "ISSUE BOOKS";
-            this.issueBooks_btn.UseVisualStyleBackColor = false;
-            this.issueBooks_btn.Click += new System.EventHandler(this.issueBooks_btn_Click);
-            // 
-            // addBooks_btn
-            // 
-            this.addBooks_btn.BackColor = System.Drawing.Color.Gray;
-            this.addBooks_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.addBooks_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSeaGreen;
-            this.addBooks_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSeaGreen;
-            this.addBooks_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addBooks_btn.ForeColor = System.Drawing.Color.Black;
-            this.addBooks_btn.Image = global::LibraryManagementSystem.Properties.Resources.icons8_book_32px;
-            this.addBooks_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.addBooks_btn.Location = new System.Drawing.Point(11, 290);
-            this.addBooks_btn.Margin = new System.Windows.Forms.Padding(4);
-            this.addBooks_btn.Name = "addBooks_btn";
-            this.addBooks_btn.Size = new System.Drawing.Size(267, 55);
-            this.addBooks_btn.TabIndex = 3;
-            this.addBooks_btn.Text = "ADD BOOKS";
-            this.addBooks_btn.UseVisualStyleBackColor = false;
-            this.addBooks_btn.Click += new System.EventHandler(this.addBooks_btn_Click);
-            // 
-            // dashboard_btn
-            // 
-            this.dashboard_btn.BackColor = System.Drawing.Color.Gray;
-            this.dashboard_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dashboard_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSeaGreen;
-            this.dashboard_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSeaGreen;
-            this.dashboard_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.dashboard_btn.ForeColor = System.Drawing.Color.Black;
-            this.dashboard_btn.Image = global::LibraryManagementSystem.Properties.Resources.icons8_dashboard_32px;
-            this.dashboard_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.dashboard_btn.Location = new System.Drawing.Point(11, 228);
-            this.dashboard_btn.Margin = new System.Windows.Forms.Padding(4);
-            this.dashboard_btn.Name = "dashboard_btn";
-            this.dashboard_btn.Size = new System.Drawing.Size(267, 55);
-            this.dashboard_btn.TabIndex = 2;
-            this.dashboard_btn.Text = "DASHBOARD";
-            this.dashboard_btn.UseVisualStyleBackColor = false;
-            this.dashboard_btn.Click += new System.EventHandler(this.dashboard_btn_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::LibraryManagementSystem.Properties.Resources.icons8_library_100px;
-            this.pictureBox1.Location = new System.Drawing.Point(77, 34);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(133, 123);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // dashboard1
-            // 
-            this.dashboard1.Location = new System.Drawing.Point(0, 0);
-            this.dashboard1.Margin = new System.Windows.Forms.Padding(5);
-            this.dashboard1.Name = "dashboard1";
-            this.dashboard1.Size = new System.Drawing.Size(1173, 695);
-            this.dashboard1.TabIndex = 3;
-            this.dashboard1.Load += new System.EventHandler(this.dashboard1_Load);
             // 
             // MainForm
             // 
@@ -326,5 +351,6 @@ namespace LibraryManagementSystem
         private AddBooks addBooks1;
         private IssueBooks issueBooks1;
         private Dashboard dashboard1;
+        private System.Windows.Forms.Button member_btn;
     }
 }

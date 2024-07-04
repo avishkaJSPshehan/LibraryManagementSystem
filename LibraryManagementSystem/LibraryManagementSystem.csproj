@@ -147,6 +147,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\thumbs-down.png" />
+    <None Include="Assets\follower.png" />
+    <None Include="Assets\follower 2.png" />
+    <None Include="Assets\calendar.png" />
     <Content Include="Assets\icons8_books_60px_3.png" />
     <Content Include="Assets\icons8_book_100px_1.png" />
     <Content Include="Assets\icons8_book_32px.png" />
