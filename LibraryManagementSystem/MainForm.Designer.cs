@@ -29,6 +29,8 @@ namespace LibraryManagementSystem
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -43,15 +45,35 @@ namespace LibraryManagementSystem
             this.greet_label = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.addMember1 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.addMember_clearBtn = new System.Windows.Forms.Button();
+            this.addMember_deleteBtn = new System.Windows.Forms.Button();
+            this.addBooks_status = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.addBooks_published = new System.Windows.Forms.DateTimePicker();
+            this.label6 = new System.Windows.Forms.Label();
+            this.addMember_updateBtn = new System.Windows.Forms.Button();
+            this.addMember_addBtn = new System.Windows.Forms.Button();
+            this.addBooks_author = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.addBooks_bookTitle = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.dashboard1 = new LibraryManagementSystem.Dashboard();
             this.addBooks1 = new LibraryManagementSystem.AddBooks();
             this.issueBooks1 = new LibraryManagementSystem.IssueBooks();
             this.returnBooks1 = new LibraryManagementSystem.ReturnBooks();
-            this.addMember1 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
+            this.addMember1.SuspendLayout();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -279,6 +301,247 @@ namespace LibraryManagementSystem
             this.panel3.Size = new System.Drawing.Size(1174, 695);
             this.panel3.TabIndex = 2;
             // 
+            // addMember1
+            // 
+            this.addMember1.Controls.Add(this.panel4);
+            this.addMember1.Controls.Add(this.panel5);
+            this.addMember1.Location = new System.Drawing.Point(0, 0);
+            this.addMember1.Name = "addMember1";
+            this.addMember1.Size = new System.Drawing.Size(1174, 695);
+            this.addMember1.TabIndex = 4;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.dataGridView1);
+            this.panel4.Controls.Add(this.label3);
+            this.panel4.Location = new System.Drawing.Point(418, 24);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(737, 647);
+            this.panel4.TabIndex = 5;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(128)))), ((int)(((byte)(87)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dataGridView1.EnableHeadersVisualStyles = false;
+            this.dataGridView1.Location = new System.Drawing.Point(20, 71);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.Size = new System.Drawing.Size(695, 550);
+            this.dataGridView1.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(20, 22);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(143, 29);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "All Members";
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.addMember_clearBtn);
+            this.panel5.Controls.Add(this.addMember_deleteBtn);
+            this.panel5.Controls.Add(this.addBooks_status);
+            this.panel5.Controls.Add(this.label5);
+            this.panel5.Controls.Add(this.addBooks_published);
+            this.panel5.Controls.Add(this.label6);
+            this.panel5.Controls.Add(this.addMember_updateBtn);
+            this.panel5.Controls.Add(this.addMember_addBtn);
+            this.panel5.Controls.Add(this.addBooks_author);
+            this.panel5.Controls.Add(this.label7);
+            this.panel5.Controls.Add(this.addBooks_bookTitle);
+            this.panel5.Controls.Add(this.label8);
+            this.panel5.Location = new System.Drawing.Point(20, 24);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(370, 647);
+            this.panel5.TabIndex = 4;
+            // 
+            // addMember_clearBtn
+            // 
+            this.addMember_clearBtn.BackColor = System.Drawing.Color.Cyan;
+            this.addMember_clearBtn.FlatAppearance.BorderSize = 0;
+            this.addMember_clearBtn.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkSeaGreen;
+            this.addMember_clearBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSeaGreen;
+            this.addMember_clearBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addMember_clearBtn.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addMember_clearBtn.ForeColor = System.Drawing.Color.Black;
+            this.addMember_clearBtn.Location = new System.Drawing.Point(195, 500);
+            this.addMember_clearBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.addMember_clearBtn.Name = "addMember_clearBtn";
+            this.addMember_clearBtn.Size = new System.Drawing.Size(132, 42);
+            this.addMember_clearBtn.TabIndex = 22;
+            this.addMember_clearBtn.Text = "CLEAR";
+            this.addMember_clearBtn.UseVisualStyleBackColor = false;
+            // 
+            // addMember_deleteBtn
+            // 
+            this.addMember_deleteBtn.BackColor = System.Drawing.Color.Cyan;
+            this.addMember_deleteBtn.FlatAppearance.BorderSize = 0;
+            this.addMember_deleteBtn.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkSeaGreen;
+            this.addMember_deleteBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSeaGreen;
+            this.addMember_deleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addMember_deleteBtn.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addMember_deleteBtn.ForeColor = System.Drawing.Color.Black;
+            this.addMember_deleteBtn.Location = new System.Drawing.Point(36, 500);
+            this.addMember_deleteBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.addMember_deleteBtn.Name = "addMember_deleteBtn";
+            this.addMember_deleteBtn.Size = new System.Drawing.Size(132, 42);
+            this.addMember_deleteBtn.TabIndex = 21;
+            this.addMember_deleteBtn.Text = "DELETE";
+            this.addMember_deleteBtn.UseVisualStyleBackColor = false;
+            // 
+            // addBooks_status
+            // 
+            this.addBooks_status.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addBooks_status.FormattingEnabled = true;
+            this.addBooks_status.Items.AddRange(new object[] {
+            "Available",
+            "Not Available"});
+            this.addBooks_status.Location = new System.Drawing.Point(108, 208);
+            this.addBooks_status.Margin = new System.Windows.Forms.Padding(4);
+            this.addBooks_status.Name = "addBooks_status";
+            this.addBooks_status.Size = new System.Drawing.Size(223, 27);
+            this.addBooks_status.TabIndex = 20;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(34, 218);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(63, 21);
+            this.label5.TabIndex = 19;
+            this.label5.Text = "Status:";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // addBooks_published
+            // 
+            this.addBooks_published.Location = new System.Drawing.Point(106, 168);
+            this.addBooks_published.Margin = new System.Windows.Forms.Padding(4);
+            this.addBooks_published.Name = "addBooks_published";
+            this.addBooks_published.Size = new System.Drawing.Size(221, 22);
+            this.addBooks_published.TabIndex = 18;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(10, 169);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(86, 21);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "Published:";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // addMember_updateBtn
+            // 
+            this.addMember_updateBtn.BackColor = System.Drawing.Color.Cyan;
+            this.addMember_updateBtn.FlatAppearance.BorderSize = 0;
+            this.addMember_updateBtn.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkSeaGreen;
+            this.addMember_updateBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSeaGreen;
+            this.addMember_updateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addMember_updateBtn.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addMember_updateBtn.ForeColor = System.Drawing.Color.Black;
+            this.addMember_updateBtn.Location = new System.Drawing.Point(195, 436);
+            this.addMember_updateBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.addMember_updateBtn.Name = "addMember_updateBtn";
+            this.addMember_updateBtn.Size = new System.Drawing.Size(132, 42);
+            this.addMember_updateBtn.TabIndex = 16;
+            this.addMember_updateBtn.Text = "UPDATE";
+            this.addMember_updateBtn.UseVisualStyleBackColor = false;
+            // 
+            // addMember_addBtn
+            // 
+            this.addMember_addBtn.BackColor = System.Drawing.Color.Cyan;
+            this.addMember_addBtn.FlatAppearance.BorderSize = 0;
+            this.addMember_addBtn.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkSeaGreen;
+            this.addMember_addBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSeaGreen;
+            this.addMember_addBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addMember_addBtn.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addMember_addBtn.ForeColor = System.Drawing.Color.Black;
+            this.addMember_addBtn.Location = new System.Drawing.Point(36, 436);
+            this.addMember_addBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.addMember_addBtn.Name = "addMember_addBtn";
+            this.addMember_addBtn.Size = new System.Drawing.Size(132, 42);
+            this.addMember_addBtn.TabIndex = 15;
+            this.addMember_addBtn.Text = "ADD";
+            this.addMember_addBtn.UseVisualStyleBackColor = false;
+            // 
+            // addBooks_author
+            // 
+            this.addBooks_author.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addBooks_author.Location = new System.Drawing.Point(108, 117);
+            this.addBooks_author.Margin = new System.Windows.Forms.Padding(4);
+            this.addBooks_author.Name = "addBooks_author";
+            this.addBooks_author.Size = new System.Drawing.Size(223, 26);
+            this.addBooks_author.TabIndex = 12;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(32, 121);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(66, 21);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "Author:";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // addBooks_bookTitle
+            // 
+            this.addBooks_bookTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addBooks_bookTitle.Location = new System.Drawing.Point(108, 70);
+            this.addBooks_bookTitle.Margin = new System.Windows.Forms.Padding(4);
+            this.addBooks_bookTitle.Name = "addBooks_bookTitle";
+            this.addBooks_bookTitle.Size = new System.Drawing.Size(223, 26);
+            this.addBooks_bookTitle.TabIndex = 10;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(12, 74);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(92, 21);
+            this.label8.TabIndex = 9;
+            this.label8.Text = "Book TItle:";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // dashboard1
             // 
             this.dashboard1.Location = new System.Drawing.Point(0, 0);
@@ -312,13 +575,6 @@ namespace LibraryManagementSystem
             this.returnBooks1.Size = new System.Drawing.Size(1174, 695);
             this.returnBooks1.TabIndex = 0;
             // 
-            // addMember1
-            // 
-            this.addMember1.Location = new System.Drawing.Point(0, 0);
-            this.addMember1.Name = "addMember1";
-            this.addMember1.Size = new System.Drawing.Size(1174, 695);
-            this.addMember1.TabIndex = 4;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -338,6 +594,12 @@ namespace LibraryManagementSystem
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
+            this.addMember1.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -363,5 +625,21 @@ namespace LibraryManagementSystem
         private Dashboard dashboard1;
         private System.Windows.Forms.Button member_btn;
         private System.Windows.Forms.Panel addMember1;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button addMember_clearBtn;
+        private System.Windows.Forms.Button addMember_deleteBtn;
+        private System.Windows.Forms.ComboBox addBooks_status;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DateTimePicker addBooks_published;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button addMember_updateBtn;
+        private System.Windows.Forms.Button addMember_addBtn;
+        private System.Windows.Forms.TextBox addBooks_author;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox addBooks_bookTitle;
+        private System.Windows.Forms.Label label8;
     }
 }
