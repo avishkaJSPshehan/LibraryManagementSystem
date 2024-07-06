@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace LibraryManagementSystem
 {
@@ -21,6 +23,9 @@ namespace LibraryManagementSystem
         {
             Application.Exit();
         }
+
+        SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\Documents\library.mdf;Integrated Security=True;Connect Timeout=30");
+
 
         private void logout_btn_Click(object sender, EventArgs e)
         {
@@ -118,6 +123,69 @@ namespace LibraryManagementSystem
             issueBooks1.Visible = false;
             addMember1.Visible = true;
 
+        }
+
+        private void addMember_addBtn_Click(object sender, EventArgs e)
+        {
+
+            insert_data();
+        }
+
+        void insert_data()
+        {
+            if (addMember_id.Text == null
+                || addMember_name.Text == ""
+                || addMember_gender.Text == ""
+                || addMember_nic.Text == ""
+                || addMember_address.Text == ""
+                || addMember_email.Text == ""
+                || addMember_date.Value == null)
+            {
+                MessageBox.Show("Please fill all blank fields", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                if (connect.State == ConnectionState.Closed)
+                {
+                    try
+                    {
+                        DateTime today = DateTime.Today;
+                        connect.Open();
+                        string insertData = "INSERT INTO member " +
+                            "(member_name, gender, nic, member_address, email, get_date) " +
+                            "VALUES(@memberName, @Gender, @NIC, @memberAddress, @Email, @getDate)";
+
+
+                        using (SqlCommand cmd = new SqlCommand(insertData, connect))
+                        {
+                            cmd.Parameters.AddWithValue("@memberName", addMember_name.Text.Trim());
+                            cmd.Parameters.AddWithValue("@Gender", addMember_gender.Text.Trim());
+                            cmd.Parameters.AddWithValue("@NIC", addMember_nic.Text.Trim());
+                            cmd.Parameters.AddWithValue("@memberAddress", addMember_address.Text.Trim());
+                            cmd.Parameters.AddWithValue("@Email", addMember_email.Text.Trim());
+                            cmd.Parameters.AddWithValue("@getDate", today);
+
+                            cmd.ExecuteNonQuery();
+
+                            //displayBooks();
+
+                            MessageBox.Show("Added successfully!", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            //clearFields();
+                        }
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error: " + ex, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    }
+                    finally
+                    {
+                        connect.Close();
+                    }
+                }
+            }
         }
     }
 }
