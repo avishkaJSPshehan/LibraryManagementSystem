@@ -50,6 +50,14 @@ namespace LibraryManagementSystem
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.addMember_email = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.addMember_address = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.addMember_nic = new System.Windows.Forms.TextBox();
+            this.addMember_gender = new System.Windows.Forms.TextBox();
             this.addMember_clearBtn = new System.Windows.Forms.Button();
             this.addMember_deleteBtn = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -61,18 +69,10 @@ namespace LibraryManagementSystem
             this.label7 = new System.Windows.Forms.Label();
             this.addMember_id = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.addMember_gender = new System.Windows.Forms.TextBox();
-            this.addMember_nic = new System.Windows.Forms.TextBox();
-            this.addMember_address = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.dashboard1 = new LibraryManagementSystem.Dashboard();
             this.addBooks1 = new LibraryManagementSystem.AddBooks();
             this.issueBooks1 = new LibraryManagementSystem.IssueBooks();
             this.returnBooks1 = new LibraryManagementSystem.ReturnBooks();
-            this.addMember_email = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -296,11 +296,11 @@ namespace LibraryManagementSystem
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.addMember1);
             this.panel3.Controls.Add(this.dashboard1);
             this.panel3.Controls.Add(this.addBooks1);
             this.panel3.Controls.Add(this.issueBooks1);
             this.panel3.Controls.Add(this.returnBooks1);
+            this.panel3.Controls.Add(this.addMember1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(293, 43);
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
@@ -400,6 +400,89 @@ namespace LibraryManagementSystem
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(370, 647);
             this.panel5.TabIndex = 4;
+            // 
+            // addMember_email
+            // 
+            this.addMember_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addMember_email.Location = new System.Drawing.Point(129, 314);
+            this.addMember_email.Margin = new System.Windows.Forms.Padding(4);
+            this.addMember_email.Name = "addMember_email";
+            this.addMember_email.Size = new System.Drawing.Size(223, 26);
+            this.addMember_email.TabIndex = 29;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(5, 316);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(117, 21);
+            this.label12.TabIndex = 28;
+            this.label12.Text = "Email            :";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(79, 22);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(203, 29);
+            this.label11.TabIndex = 2;
+            this.label11.Text = "Add New Member";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(6, 360);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(117, 21);
+            this.label10.TabIndex = 27;
+            this.label10.Text = "Date             :";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // addMember_address
+            // 
+            this.addMember_address.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addMember_address.Location = new System.Drawing.Point(129, 268);
+            this.addMember_address.Margin = new System.Windows.Forms.Padding(4);
+            this.addMember_address.Name = "addMember_address";
+            this.addMember_address.Size = new System.Drawing.Size(223, 26);
+            this.addMember_address.TabIndex = 26;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(6, 268);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(116, 21);
+            this.label9.TabIndex = 25;
+            this.label9.Text = "Address        :";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // addMember_nic
+            // 
+            this.addMember_nic.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addMember_nic.Location = new System.Drawing.Point(129, 221);
+            this.addMember_nic.Margin = new System.Windows.Forms.Padding(4);
+            this.addMember_nic.Name = "addMember_nic";
+            this.addMember_nic.Size = new System.Drawing.Size(223, 26);
+            this.addMember_nic.TabIndex = 24;
+            // 
+            // addMember_gender
+            // 
+            this.addMember_gender.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addMember_gender.Location = new System.Drawing.Point(129, 169);
+            this.addMember_gender.Margin = new System.Windows.Forms.Padding(4);
+            this.addMember_gender.Name = "addMember_gender";
+            this.addMember_gender.Size = new System.Drawing.Size(223, 26);
+            this.addMember_gender.TabIndex = 23;
             // 
             // addMember_clearBtn
             // 
@@ -544,68 +627,6 @@ namespace LibraryManagementSystem
             this.label8.Text = "User Number : ";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // addMember_gender
-            // 
-            this.addMember_gender.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addMember_gender.Location = new System.Drawing.Point(129, 169);
-            this.addMember_gender.Margin = new System.Windows.Forms.Padding(4);
-            this.addMember_gender.Name = "addMember_gender";
-            this.addMember_gender.Size = new System.Drawing.Size(223, 26);
-            this.addMember_gender.TabIndex = 23;
-            // 
-            // addMember_nic
-            // 
-            this.addMember_nic.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addMember_nic.Location = new System.Drawing.Point(129, 221);
-            this.addMember_nic.Margin = new System.Windows.Forms.Padding(4);
-            this.addMember_nic.Name = "addMember_nic";
-            this.addMember_nic.Size = new System.Drawing.Size(223, 26);
-            this.addMember_nic.TabIndex = 24;
-            // 
-            // addMember_address
-            // 
-            this.addMember_address.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addMember_address.Location = new System.Drawing.Point(129, 268);
-            this.addMember_address.Margin = new System.Windows.Forms.Padding(4);
-            this.addMember_address.Name = "addMember_address";
-            this.addMember_address.Size = new System.Drawing.Size(223, 26);
-            this.addMember_address.TabIndex = 26;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(6, 268);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(116, 21);
-            this.label9.TabIndex = 25;
-            this.label9.Text = "Address        :";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(6, 360);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(117, 21);
-            this.label10.TabIndex = 27;
-            this.label10.Text = "Date             :";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(79, 22);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(203, 29);
-            this.label11.TabIndex = 2;
-            this.label11.Text = "Add New Member";
-            // 
             // dashboard1
             // 
             this.dashboard1.Location = new System.Drawing.Point(0, 0);
@@ -638,27 +659,6 @@ namespace LibraryManagementSystem
             this.returnBooks1.Name = "returnBooks1";
             this.returnBooks1.Size = new System.Drawing.Size(1174, 695);
             this.returnBooks1.TabIndex = 0;
-            // 
-            // addMember_email
-            // 
-            this.addMember_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addMember_email.Location = new System.Drawing.Point(129, 314);
-            this.addMember_email.Margin = new System.Windows.Forms.Padding(4);
-            this.addMember_email.Name = "addMember_email";
-            this.addMember_email.Size = new System.Drawing.Size(223, 26);
-            this.addMember_email.TabIndex = 29;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(5, 316);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(117, 21);
-            this.label12.TabIndex = 28;
-            this.label12.Text = "Email            :";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // MainForm
             // 
