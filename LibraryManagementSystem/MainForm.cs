@@ -41,6 +41,7 @@ namespace LibraryManagementSystem
             addBooks1.Visible = false;
             returnBooks1.Visible = false;
             issueBooks1.Visible = false;
+            addMember1.Visible = false;
 
             Dashboard dForm = dashboard1 as Dashboard;
             if (dForm != null)
@@ -55,6 +56,7 @@ namespace LibraryManagementSystem
             addBooks1.Visible = true;
             returnBooks1.Visible = false;
             issueBooks1.Visible = false;
+            addMember1.Visible = false;
 
             AddBooks aForm = addBooks1 as AddBooks;
             if(aForm != null)
@@ -69,6 +71,7 @@ namespace LibraryManagementSystem
             addBooks1.Visible = false;
             returnBooks1.Visible = false;
             issueBooks1.Visible = true;
+            addMember1.Visible = false;
 
             ReturnBooks rForm = returnBooks1 as ReturnBooks;
             if (rForm != null)
@@ -83,6 +86,7 @@ namespace LibraryManagementSystem
             addBooks1.Visible = false;
             returnBooks1.Visible = true;
             issueBooks1.Visible = false;
+            addMember1.Visible = false;
 
             IssueBooks iForm = issueBooks1 as IssueBooks;
             if (iForm != null)
@@ -103,6 +107,16 @@ namespace LibraryManagementSystem
 
         private void dashboard1_Load(object sender, EventArgs e)
         { 
+
+        }
+
+        private void member_btn_Click(object sender, EventArgs e)
+        {
+            dashboard1.Visible = false;
+            addBooks1.Visible = false;
+            returnBooks1.Visible = false;
+            issueBooks1.Visible = false;
+            addMember1.Visible = true;
 
         }
     }

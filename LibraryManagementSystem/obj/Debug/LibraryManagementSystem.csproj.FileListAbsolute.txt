@@ -49,3 +49,4 @@ D:\Programming Projects\LibraryManagementSystem\LibraryManagementSystem\obj\Debu
 D:\Programming Projects\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.csproj.CoreCompileInputs.cache
 D:\Programming Projects\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.exe
 D:\Programming Projects\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.pdb
+D:\Programming Projects\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.AddMember.resources
