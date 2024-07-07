@@ -25,7 +25,7 @@ namespace LibraryManagementSystem
         }
 
         SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\Documents\library.mdf;Integrated Security=True;Connect Timeout=30");
-
+        string connection_string = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\Documents\library.mdf;Integrated Security=True;Connect Timeout=30";
 
         private void logout_btn_Click(object sender, EventArgs e)
         {
@@ -115,6 +115,20 @@ namespace LibraryManagementSystem
 
         }
 
+        void bind_data()
+        {
+            SqlConnection conn = new SqlConnection(connection_string);
+            SqlCommand comm = new SqlCommand("SELECT * FROM member", conn);
+            conn.Open();
+            SqlDataAdapter adpt = new SqlDataAdapter(comm);
+            DataTable dt = new DataTable();
+            dt.Clear();
+            adpt.Fill(dt);
+            dataGridView1.DataSource = dt;
+            conn.Close();
+
+        }
+
         private void member_btn_Click(object sender, EventArgs e)
         {
             dashboard1.Visible = false;
@@ -122,6 +136,7 @@ namespace LibraryManagementSystem
             returnBooks1.Visible = false;
             issueBooks1.Visible = false;
             addMember1.Visible = true;
+            bind_data();
 
         }
 
@@ -129,6 +144,7 @@ namespace LibraryManagementSystem
         {
 
             insert_data();
+            bind_data();
         }
 
         void insert_data()

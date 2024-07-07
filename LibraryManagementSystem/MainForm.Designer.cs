@@ -296,11 +296,11 @@ namespace LibraryManagementSystem
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.addMember1);
             this.panel3.Controls.Add(this.dashboard1);
             this.panel3.Controls.Add(this.addBooks1);
             this.panel3.Controls.Add(this.issueBooks1);
             this.panel3.Controls.Add(this.returnBooks1);
-            this.panel3.Controls.Add(this.addMember1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(293, 43);
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
