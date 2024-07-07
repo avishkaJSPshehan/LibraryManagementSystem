@@ -40,7 +40,7 @@ namespace LibraryManagementSystem
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.dashboard_member = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dashboard_IB = new System.Windows.Forms.Label();
@@ -202,7 +202,7 @@ namespace LibraryManagementSystem
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.panel5.Controls.Add(this.label2);
+            this.panel5.Controls.Add(this.dashboard_member);
             this.panel5.Controls.Add(this.pictureBox4);
             this.panel5.Controls.Add(this.label3);
             this.panel5.Location = new System.Drawing.Point(49, 375);
@@ -211,17 +211,18 @@ namespace LibraryManagementSystem
             this.panel5.Size = new System.Drawing.Size(307, 117);
             this.panel5.TabIndex = 0;
             // 
-            // label2
+            // dashboard_member
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(252, 62);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 41);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "0";
+            this.dashboard_member.AutoSize = true;
+            this.dashboard_member.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dashboard_member.ForeColor = System.Drawing.Color.White;
+            this.dashboard_member.Location = new System.Drawing.Point(252, 62);
+            this.dashboard_member.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.dashboard_member.Name = "dashboard_member";
+            this.dashboard_member.Size = new System.Drawing.Size(37, 41);
+            this.dashboard_member.TabIndex = 2;
+            this.dashboard_member.Text = "0";
+            this.dashboard_member.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -423,7 +424,7 @@ namespace LibraryManagementSystem
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label dashboard_member;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label3;
     }

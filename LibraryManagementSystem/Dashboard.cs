@@ -23,6 +23,7 @@ namespace LibraryManagementSystem
             displayAB();
             displayIB();
             displayRB();
+            displayMembers();
         }
 
         public void refreshData()
@@ -37,6 +38,7 @@ namespace LibraryManagementSystem
             displayAB();
             displayIB();
             displayRB();
+            displayMembers();
         }
 
         public void displayAB()
@@ -170,6 +172,44 @@ namespace LibraryManagementSystem
         private void panel4_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        public void displayMembers()
+        {
+            if (connect.State == ConnectionState.Closed)
+            {
+                try
+                {
+                    connect.Open();
+                    string selectData = "SELECT COUNT(id) FROM member ";
+
+                    using (SqlCommand cmd = new SqlCommand(selectData, connect))
+                    {
+                        SqlDataReader reader = cmd.ExecuteReader();
+                        int tempIB = 0;
+
+                        if (reader.Read())
+                        {
+                            tempIB = Convert.ToInt32(reader[0]);
+
+                            dashboard_member.Text = tempIB.ToString();
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    connect.Close();
+                }
+            }
         }
     }
 }
