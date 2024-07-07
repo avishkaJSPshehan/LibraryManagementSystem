@@ -203,6 +203,32 @@ namespace LibraryManagementSystem
                 }
             }
         }
+
+        private void addMember_clearBtn_Click(object sender, EventArgs e)
+        {
+            addMember_id.Text = "";
+            addMember_name.Text = "";
+            addMember_gender.Text = "";
+            addMember_nic.Text = "";
+            addMember_address.Text = "";
+            addMember_email.Text = "";
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            dataGridView1.CurrentRow.Selected = true;
+            addMember_id.Text = dataGridView1.CurrentRow.Cells["id"].Value.ToString();
+            addMember_name.Text = dataGridView1.CurrentRow.Cells["member_name"].Value.ToString();
+            addMember_gender.Text = dataGridView1.CurrentRow.Cells["gender"].Value.ToString();
+            addMember_nic.Text = dataGridView1.CurrentRow.Cells["nic"].Value.ToString();
+            addMember_address.Text = dataGridView1.CurrentRow.Cells["member_address"].Value.ToString();
+            addMember_email.Text = dataGridView1.CurrentRow.Cells["email"].Value.ToString();
+        }
     }
 }
 

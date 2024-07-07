@@ -360,6 +360,8 @@ namespace LibraryManagementSystem
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.Size = new System.Drawing.Size(695, 550);
             this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label3
             // 
@@ -500,6 +502,7 @@ namespace LibraryManagementSystem
             this.addMember_clearBtn.TabIndex = 22;
             this.addMember_clearBtn.Text = "CLEAR";
             this.addMember_clearBtn.UseVisualStyleBackColor = false;
+            this.addMember_clearBtn.Click += new System.EventHandler(this.addMember_clearBtn_Click);
             // 
             // addMember_deleteBtn
             // 
