@@ -229,6 +229,132 @@ namespace LibraryManagementSystem
             addMember_address.Text = dataGridView1.CurrentRow.Cells["member_address"].Value.ToString();
             addMember_email.Text = dataGridView1.CurrentRow.Cells["email"].Value.ToString();
         }
+
+        private void addMember_updateBtn_Click(object sender, EventArgs e)
+        {
+            if (addMember_id.Text == ""
+               || addMember_name.Text == ""
+               || addMember_gender.Text == ""
+               || addMember_nic.Text == ""
+               || addMember_address.Text == ""
+               || addMember_email.Text == "")
+            {
+                MessageBox.Show("Please select item first", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                if (connect.State != ConnectionState.Open)
+                {
+                    DialogResult check = MessageBox.Show("Are you sure you want to UPDATE Member ID:"
+                        + addMember_id.Text + "?", "Confirmation Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                    if (check == DialogResult.Yes)
+                    {
+                        try
+                        {
+                            connect.Open();
+                            DateTime today = DateTime.Today;
+                            string updateData = "UPDATE member SET " +
+                                "member_name = @member_name, gender = @member_gender" +
+                                ", nic = @member_nic, email = @member_email,get_date = @date WHERE id = @id";
+
+                            using (SqlCommand cmd = new SqlCommand(updateData, connect))
+                            {
+                                
+                                cmd.Parameters.AddWithValue("@member_name", addMember_name.Text.Trim());
+                                cmd.Parameters.AddWithValue("@member_gender", addMember_gender.Text.Trim());
+                                cmd.Parameters.AddWithValue("@member_nic", addMember_nic.Text.Trim());
+                                cmd.Parameters.AddWithValue("@member_email", addMember_address.Text.Trim());
+                                cmd.Parameters.AddWithValue("@date", today);
+                                cmd.Parameters.AddWithValue("@id", addMember_id.Text.Trim());
+
+                                cmd.ExecuteNonQuery();
+
+                                //displayBooks();
+                                bind_data();
+
+                                MessageBox.Show("Updated successfully!", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                                //clearFields();
+                            }
+
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error: " + ex, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        finally
+                        {
+                            connect.Close();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Cancelled.", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+
+                }
+            }
+        }
+
+        private void addMember_deleteBtn_Click(object sender, EventArgs e)
+        {
+            if ( addMember_id.Text == ""
+               || addMember_name.Text == ""
+               || addMember_gender.Text == ""
+               || addMember_nic.Text == ""
+               || addMember_address.Text == ""
+               || addMember_email.Text == "")
+            {
+                MessageBox.Show("Please select item first", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                if (connect.State != ConnectionState.Open)
+                {
+                    DialogResult check = MessageBox.Show("Are you sure you want to DELETE Member ID:"
+                        + addMember_id.Text + "?", "Confirmation Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                    if (check == DialogResult.Yes)
+                    {
+                        try
+                        {
+                            connect.Open();
+                            DateTime today = DateTime.Today;
+                            string updateData = "DELETE FROM member WHERE id=@id;";
+
+                            using (SqlCommand cmd = new SqlCommand(updateData, connect))
+                            {
+                                cmd.Parameters.AddWithValue("@id", addMember_id.Text.Trim());
+
+                                cmd.ExecuteNonQuery();
+
+                                //displayBooks();
+                                bind_data();
+
+                                MessageBox.Show("Deleted successfully!", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                                //clearFields();
+                            }
+
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error: " + ex, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        finally
+                        {
+                            connect.Close();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Cancelled.", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+
+                }
+            }
+        }
     }
 }
 

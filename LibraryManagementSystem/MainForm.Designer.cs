@@ -296,11 +296,11 @@ namespace LibraryManagementSystem
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.addMember1);
             this.panel3.Controls.Add(this.dashboard1);
             this.panel3.Controls.Add(this.addBooks1);
             this.panel3.Controls.Add(this.issueBooks1);
             this.panel3.Controls.Add(this.returnBooks1);
+            this.panel3.Controls.Add(this.addMember1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(293, 43);
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
@@ -520,6 +520,7 @@ namespace LibraryManagementSystem
             this.addMember_deleteBtn.TabIndex = 21;
             this.addMember_deleteBtn.Text = "DELETE";
             this.addMember_deleteBtn.UseVisualStyleBackColor = false;
+            this.addMember_deleteBtn.Click += new System.EventHandler(this.addMember_deleteBtn_Click);
             // 
             // label5
             // 
@@ -569,6 +570,7 @@ namespace LibraryManagementSystem
             this.addMember_updateBtn.TabIndex = 16;
             this.addMember_updateBtn.Text = "UPDATE";
             this.addMember_updateBtn.UseVisualStyleBackColor = false;
+            this.addMember_updateBtn.Click += new System.EventHandler(this.addMember_updateBtn_Click);
             // 
             // addMember_addBtn
             // 
