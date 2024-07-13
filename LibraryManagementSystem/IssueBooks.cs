@@ -129,7 +129,7 @@ namespace LibraryManagementSystem
                 try
                 {
                     connect.Open();
-                    string selectData = "SELECT id, book_title FROM books WHERE status = 'Available' AND date_delete IS NULL";
+                    string selectData = "SELECT isbn_number, book_title FROM books WHERE status = 'Available' AND date_delete IS NULL";
 
                     using (SqlCommand cmd = new SqlCommand(selectData, connect))
                     {
@@ -139,7 +139,7 @@ namespace LibraryManagementSystem
 
                         bookIssue_bookTitle.DataSource = table;
                         bookIssue_bookTitle.DisplayMember = "book_title";
-                        bookIssue_bookTitle.ValueMember = "id";
+                        bookIssue_bookTitle.ValueMember = "isbn_number";
 
                     }
                 }
@@ -163,16 +163,16 @@ namespace LibraryManagementSystem
                 if (bookIssue_bookTitle.SelectedValue != null)
                 {
                     DataRowView selectedRow = (DataRowView)bookIssue_bookTitle.SelectedItem;
-                    int selectID = Convert.ToInt32(selectedRow["id"]);
+                    int selectID = Convert.ToInt32(selectedRow["isbn_number"]);
                     try
                     {
                         connect.Open();
 
-                        string selectData = "SELECT * FROM books WHERE id = @id";
+                        string selectData = "SELECT * FROM books WHERE isbn_number = @isbn_number";
 
                         using (SqlCommand cmd = new SqlCommand(selectData, connect))
                         {
-                            cmd.Parameters.AddWithValue("@id", selectID);
+                            cmd.Parameters.AddWithValue("@isbn_number", selectID);
 
                             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                             DataTable table = new DataTable();
