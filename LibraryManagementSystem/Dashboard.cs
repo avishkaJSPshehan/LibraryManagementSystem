@@ -48,7 +48,7 @@ namespace LibraryManagementSystem
                 try
                 {
                     connect.Open();
-                    string selectData = "SELECT COUNT(id) FROM books " +
+                    string selectData = "SELECT COUNT(isbn_number) FROM books " +
                         "WHERE status = 'Available' AND date_delete IS NULL";
 
                     using(SqlCommand cmd = new SqlCommand(selectData, connect))

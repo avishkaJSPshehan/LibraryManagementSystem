@@ -77,12 +77,15 @@ namespace LibraryManagementSystem
 
         private void addBooks_addBtn_Click(object sender, EventArgs e)
         {
-            if(addBooks_picture.Image == null
+            if(isbn_number.Text == ""
+                || addBooks_picture.Image == null
                 || addBooks_bookTitle.Text == ""
                 || addBooks_author.Text == ""
                 || addBooks_published.Value == null
                 || addBooks_status.Text == ""
-                || addBooks_picture.Image == null)
+                || bookqty.Text == ""
+                || addBooks_picture.Image == null
+                )
             {
                 MessageBox.Show("Please fill all blank fields", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -95,8 +98,8 @@ namespace LibraryManagementSystem
                         DateTime today = DateTime.Today;
                         connect.Open();
                         string insertData = "INSERT INTO books " +
-                            "(book_title, author, published_data, status, image, date_insert) " +
-                            "VALUES(@bookTitle, @author, @published_data, @status, @image, @dateInsert)";
+                            "(isbn_number,book_title, author, published_data, status, date_insert,qty, image) " +
+                            "VALUES(@isbn_number,@bookTitle, @author, @published_data, @status, @dateInsert,@qty,@image )";
 
                         string path = Path.Combine(@"D:\Programming Projects\LibraryManagementSystem\LibraryManagementSystem\Books_Directory\" +
                             addBooks_bookTitle.Text + addBooks_author.Text.Trim() + ".jpg");
@@ -112,12 +115,14 @@ namespace LibraryManagementSystem
 
                         using(SqlCommand cmd = new SqlCommand(insertData, connect))
                         {
+                            cmd.Parameters.AddWithValue("@isbn_number", isbn_number.Text.Trim());
                             cmd.Parameters.AddWithValue("@bookTitle", addBooks_bookTitle.Text.Trim());
                             cmd.Parameters.AddWithValue("@author", addBooks_author.Text.Trim());
                             cmd.Parameters.AddWithValue("@published_data", addBooks_published.Value);
                             cmd.Parameters.AddWithValue("@status", addBooks_status.Text.Trim());
-                            cmd.Parameters.AddWithValue("@image", path);
                             cmd.Parameters.AddWithValue("@dateInsert", today);
+                            cmd.Parameters.AddWithValue("@qty", bookqty.Text.Trim());
+                            cmd.Parameters.AddWithValue("@image", path);
 
                             cmd.ExecuteNonQuery();
 
@@ -157,6 +162,8 @@ namespace LibraryManagementSystem
             addBooks_author.Text = "";
             addBooks_picture.Image = null;
             addBooks_status.SelectedIndex = -1;
+            isbn_number.Text = "";
+            bookqty.Text = "";
         }
 
         public void displayBooks()
@@ -174,12 +181,12 @@ namespace LibraryManagementSystem
             if(e.RowIndex != -1)
             {
                 DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
-                bookID = (int)row.Cells[0].Value;
+                isbn_number.Text = row.Cells[0].Value.ToString();
                 addBooks_bookTitle.Text = row.Cells[1].Value.ToString();
                 addBooks_author.Text = row.Cells[2].Value.ToString();
                 addBooks_published.Text = row.Cells[3].Value.ToString();
 
-                string imagePath = row.Cells[8].Value.ToString();
+                string imagePath = row.Cells[9].Value.ToString();
 
 
                 if (imagePath != null || imagePath.Length >= 1)
@@ -190,7 +197,8 @@ namespace LibraryManagementSystem
                 {
                     addBooks_picture.Image = null;
                 }
-                addBooks_status.Text = row.Cells[5].Value.ToString();
+                addBooks_status.Text = row.Cells[4].Value.ToString();
+                bookqty.Text = row.Cells[8].Value.ToString();
             }
         }
 
@@ -201,12 +209,15 @@ namespace LibraryManagementSystem
 
         private void addBooks_updateBtn_Click(object sender, EventArgs e)
         {
-            if (addBooks_picture.Image == null
+            if (isbn_number.Text == ""
+                || addBooks_picture.Image == null
                 || addBooks_bookTitle.Text == ""
                 || addBooks_author.Text == ""
                 || addBooks_published.Value == null
                 || addBooks_status.Text == ""
-                || addBooks_picture.Image == null)
+                || bookqty.Text == ""
+                || addBooks_picture.Image == null
+                )
             {
                 MessageBox.Show("Please select item first", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -225,7 +236,7 @@ namespace LibraryManagementSystem
                             DateTime today = DateTime.Today;
                             string updateData = "UPDATE books SET book_title = @bookTitle" +
                                 ", author = @author, published_data = @published" +
-                                ", status = @status, date_update = @dateUpdate WHERE id = @id";
+                                ", status = @status, date_update = @dateUpdate, qty = @bookqty WHERE isbn_number = @isbn_number";
 
                             using (SqlCommand cmd = new SqlCommand(updateData, connect))
                             {
@@ -234,7 +245,8 @@ namespace LibraryManagementSystem
                                 cmd.Parameters.AddWithValue("@published", addBooks_published.Value);
                                 cmd.Parameters.AddWithValue("@status", addBooks_status.Text.Trim());
                                 cmd.Parameters.AddWithValue("@dateUpdate", today);
-                                cmd.Parameters.AddWithValue("@id", bookID);
+                                cmd.Parameters.AddWithValue("@bookqty", bookqty.Text.Trim());
+                                cmd.Parameters.AddWithValue("@isbn_number", isbn_number.Text.Trim());
 
                                 cmd.ExecuteNonQuery();
 
@@ -296,12 +308,12 @@ namespace LibraryManagementSystem
                         {
                             connect.Open();
                             DateTime today = DateTime.Today;
-                            string updateData = "DELETE FROM books WHERE id=@id;";
+                            string updateData = "DELETE FROM books WHERE isbn_number=@isbn_number;";
 
                             using (SqlCommand cmd = new SqlCommand(updateData, connect))
                             {
                                
-                                cmd.Parameters.AddWithValue("@id", bookID);
+                                cmd.Parameters.AddWithValue("@isbn_number", isbn_number.Text.Trim());
 
                                 cmd.ExecuteNonQuery();
 
@@ -350,6 +362,16 @@ namespace LibraryManagementSystem
             adpt.Fill(dt);
             dataGridView1.DataSource = dt;
             conn.Close();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
