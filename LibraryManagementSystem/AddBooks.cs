@@ -170,7 +170,7 @@ namespace LibraryManagementSystem
                 addBooks_author.Text = row.Cells[2].Value.ToString();
                 addBooks_published.Text = row.Cells[3].Value.ToString();
 
-                string imagePath = row.Cells[4].Value.ToString();
+                string imagePath = row.Cells[8].Value.ToString();
 
 
                 if (imagePath != null || imagePath.Length >= 1)
@@ -279,11 +279,11 @@ namespace LibraryManagementSystem
                         {
                             connect.Open();
                             DateTime today = DateTime.Today;
-                            string updateData = "UPDATE books SET date_delete = @dateDelete WHERE id = @id";
+                            string updateData = "DELETE FROM books WHERE id=@id;";
 
                             using (SqlCommand cmd = new SqlCommand(updateData, connect))
                             {
-                                cmd.Parameters.AddWithValue("@dateDelete", today);
+                               
                                 cmd.Parameters.AddWithValue("@id", bookID);
 
                                 cmd.ExecuteNonQuery();
