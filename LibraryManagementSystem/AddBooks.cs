@@ -16,6 +16,7 @@ namespace LibraryManagementSystem
     public partial class AddBooks : UserControl
     {
         SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\Documents\library.mdf;Integrated Security=True;Connect Timeout=30");
+        string connection_string = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\Documents\library.mdf;Integrated Security=True;Connect Timeout=30";
 
         public AddBooks()
         {
@@ -102,7 +103,7 @@ namespace LibraryManagementSystem
 
                             cmd.ExecuteNonQuery();
 
-                            displayBooks();
+                            //displayBooks();
 
                             MessageBox.Show("Added successfully!", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -293,6 +294,19 @@ namespace LibraryManagementSystem
 
                 }
             }
+        }
+
+        private void AddBooks_Load(object sender, EventArgs e)
+        {
+            SqlConnection conn = new SqlConnection(connection_string);
+            SqlCommand comm = new SqlCommand("SELECT * FROM books", conn);
+            conn.Open();
+            SqlDataAdapter adpt = new SqlDataAdapter(comm);
+            DataTable dt = new DataTable();
+            dt.Clear();
+            adpt.Fill(dt);
+            dataGridView1.DataSource = dt;
+            conn.Close();
         }
     }
 }

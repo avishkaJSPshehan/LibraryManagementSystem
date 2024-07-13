@@ -45,6 +45,10 @@ namespace LibraryManagementSystem
             this.greet_label = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.dashboard1 = new LibraryManagementSystem.Dashboard();
+            this.addBooks1 = new LibraryManagementSystem.AddBooks();
+            this.issueBooks1 = new LibraryManagementSystem.IssueBooks();
+            this.returnBooks1 = new LibraryManagementSystem.ReturnBooks();
             this.addMember1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -69,10 +73,6 @@ namespace LibraryManagementSystem
             this.label7 = new System.Windows.Forms.Label();
             this.addMember_id = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.dashboard1 = new LibraryManagementSystem.Dashboard();
-            this.addBooks1 = new LibraryManagementSystem.AddBooks();
-            this.issueBooks1 = new LibraryManagementSystem.IssueBooks();
-            this.returnBooks1 = new LibraryManagementSystem.ReturnBooks();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -296,17 +296,50 @@ namespace LibraryManagementSystem
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.dashboard1);
             this.panel3.Controls.Add(this.addBooks1);
             this.panel3.Controls.Add(this.issueBooks1);
             this.panel3.Controls.Add(this.returnBooks1);
             this.panel3.Controls.Add(this.addMember1);
+            this.panel3.Controls.Add(this.dashboard1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(293, 43);
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1174, 695);
             this.panel3.TabIndex = 2;
+            // 
+            // dashboard1
+            // 
+            this.dashboard1.Location = new System.Drawing.Point(0, 0);
+            this.dashboard1.Margin = new System.Windows.Forms.Padding(5);
+            this.dashboard1.Name = "dashboard1";
+            this.dashboard1.Size = new System.Drawing.Size(1173, 695);
+            this.dashboard1.TabIndex = 3;
+            this.dashboard1.Load += new System.EventHandler(this.dashboard1_Load);
+            // 
+            // addBooks1
+            // 
+            this.addBooks1.Location = new System.Drawing.Point(0, 0);
+            this.addBooks1.Margin = new System.Windows.Forms.Padding(5);
+            this.addBooks1.Name = "addBooks1";
+            this.addBooks1.Size = new System.Drawing.Size(1173, 695);
+            this.addBooks1.TabIndex = 2;
+            // 
+            // issueBooks1
+            // 
+            this.issueBooks1.Location = new System.Drawing.Point(0, 0);
+            this.issueBooks1.Margin = new System.Windows.Forms.Padding(5);
+            this.issueBooks1.Name = "issueBooks1";
+            this.issueBooks1.Size = new System.Drawing.Size(1173, 695);
+            this.issueBooks1.TabIndex = 1;
+            // 
+            // returnBooks1
+            // 
+            this.returnBooks1.Location = new System.Drawing.Point(0, 0);
+            this.returnBooks1.Margin = new System.Windows.Forms.Padding(5);
+            this.returnBooks1.Name = "returnBooks1";
+            this.returnBooks1.Size = new System.Drawing.Size(1174, 695);
+            this.returnBooks1.TabIndex = 0;
             // 
             // addMember1
             // 
@@ -631,39 +664,6 @@ namespace LibraryManagementSystem
             this.label8.TabIndex = 9;
             this.label8.Text = "User Number : ";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // dashboard1
-            // 
-            this.dashboard1.Location = new System.Drawing.Point(0, 0);
-            this.dashboard1.Margin = new System.Windows.Forms.Padding(5);
-            this.dashboard1.Name = "dashboard1";
-            this.dashboard1.Size = new System.Drawing.Size(1173, 695);
-            this.dashboard1.TabIndex = 3;
-            this.dashboard1.Load += new System.EventHandler(this.dashboard1_Load);
-            // 
-            // addBooks1
-            // 
-            this.addBooks1.Location = new System.Drawing.Point(0, 0);
-            this.addBooks1.Margin = new System.Windows.Forms.Padding(5);
-            this.addBooks1.Name = "addBooks1";
-            this.addBooks1.Size = new System.Drawing.Size(1173, 695);
-            this.addBooks1.TabIndex = 2;
-            // 
-            // issueBooks1
-            // 
-            this.issueBooks1.Location = new System.Drawing.Point(0, 0);
-            this.issueBooks1.Margin = new System.Windows.Forms.Padding(5);
-            this.issueBooks1.Name = "issueBooks1";
-            this.issueBooks1.Size = new System.Drawing.Size(1173, 695);
-            this.issueBooks1.TabIndex = 1;
-            // 
-            // returnBooks1
-            // 
-            this.returnBooks1.Location = new System.Drawing.Point(0, 0);
-            this.returnBooks1.Margin = new System.Windows.Forms.Padding(5);
-            this.returnBooks1.Name = "returnBooks1";
-            this.returnBooks1.Size = new System.Drawing.Size(1174, 695);
-            this.returnBooks1.TabIndex = 0;
             // 
             // MainForm
             // 
