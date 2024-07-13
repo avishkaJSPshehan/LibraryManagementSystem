@@ -23,6 +23,7 @@ namespace LibraryManagementSystem
             displayAB();
             displayIB();
             displayRB();
+            displayNR();
             displayMembers();
         }
 
@@ -38,6 +39,7 @@ namespace LibraryManagementSystem
             displayAB();
             displayIB();
             displayRB();
+            displayNR();
             displayMembers();
         }
 
@@ -65,6 +67,41 @@ namespace LibraryManagementSystem
                     }
                 }
                 catch(Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    connect.Close();
+                }
+            }
+        }
+
+
+        public void displayNR()
+        {
+            if (connect.State == ConnectionState.Closed)
+            {
+                try
+                {
+                    connect.Open();
+                    string selectData = "SELECT COUNT(id) FROM issues " +
+                        "WHERE status = 'Not Return'";
+
+                    using (SqlCommand cmd = new SqlCommand(selectData, connect))
+                    {
+                        SqlDataReader reader = cmd.ExecuteReader();
+                        int tempAB = 0;
+
+                        if (reader.Read())
+                        {
+                            tempAB = Convert.ToInt32(reader[0]);
+
+                            not_return_count.Text = tempAB.ToString();
+                        }
+                    }
+                }
+                catch (Exception ex)
                 {
                     MessageBox.Show("Error: " + ex, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }

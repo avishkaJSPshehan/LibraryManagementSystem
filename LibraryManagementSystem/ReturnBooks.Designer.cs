@@ -77,7 +77,7 @@ namespace LibraryManagementSystem
             this.panel1.Controls.Add(this.returnBooks_issueID);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(17, 22);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(370, 647);
             this.panel1.TabIndex = 0;
@@ -85,7 +85,7 @@ namespace LibraryManagementSystem
             // bookIssue_issueDate
             // 
             this.bookIssue_issueDate.Location = new System.Drawing.Point(125, 321);
-            this.bookIssue_issueDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bookIssue_issueDate.Margin = new System.Windows.Forms.Padding(4);
             this.bookIssue_issueDate.Name = "bookIssue_issueDate";
             this.bookIssue_issueDate.Size = new System.Drawing.Size(224, 22);
             this.bookIssue_issueDate.TabIndex = 19;
@@ -100,7 +100,7 @@ namespace LibraryManagementSystem
             this.returnBooks_clearBtn.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.returnBooks_clearBtn.ForeColor = System.Drawing.Color.Black;
             this.returnBooks_clearBtn.Location = new System.Drawing.Point(193, 417);
-            this.returnBooks_clearBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.returnBooks_clearBtn.Margin = new System.Windows.Forms.Padding(4);
             this.returnBooks_clearBtn.Name = "returnBooks_clearBtn";
             this.returnBooks_clearBtn.Size = new System.Drawing.Size(132, 42);
             this.returnBooks_clearBtn.TabIndex = 16;
@@ -118,7 +118,7 @@ namespace LibraryManagementSystem
             this.returnBooks_returnBtn.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.returnBooks_returnBtn.ForeColor = System.Drawing.Color.Black;
             this.returnBooks_returnBtn.Location = new System.Drawing.Point(35, 417);
-            this.returnBooks_returnBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.returnBooks_returnBtn.Margin = new System.Windows.Forms.Padding(4);
             this.returnBooks_returnBtn.Name = "returnBooks_returnBtn";
             this.returnBooks_returnBtn.Size = new System.Drawing.Size(132, 42);
             this.returnBooks_returnBtn.TabIndex = 15;
@@ -142,7 +142,7 @@ namespace LibraryManagementSystem
             // 
             this.returnBooks_author.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.returnBooks_author.Location = new System.Drawing.Point(127, 271);
-            this.returnBooks_author.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.returnBooks_author.Margin = new System.Windows.Forms.Padding(4);
             this.returnBooks_author.Name = "returnBooks_author";
             this.returnBooks_author.Size = new System.Drawing.Size(223, 26);
             this.returnBooks_author.TabIndex = 12;
@@ -163,7 +163,7 @@ namespace LibraryManagementSystem
             // 
             this.returnBooks_bookTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.returnBooks_bookTitle.Location = new System.Drawing.Point(127, 224);
-            this.returnBooks_bookTitle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.returnBooks_bookTitle.Margin = new System.Windows.Forms.Padding(4);
             this.returnBooks_bookTitle.Name = "returnBooks_bookTitle";
             this.returnBooks_bookTitle.Size = new System.Drawing.Size(223, 26);
             this.returnBooks_bookTitle.TabIndex = 10;
@@ -184,7 +184,7 @@ namespace LibraryManagementSystem
             // 
             this.returnBooks_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.returnBooks_email.Location = new System.Drawing.Point(127, 178);
-            this.returnBooks_email.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.returnBooks_email.Margin = new System.Windows.Forms.Padding(4);
             this.returnBooks_email.Name = "returnBooks_email";
             this.returnBooks_email.Size = new System.Drawing.Size(223, 26);
             this.returnBooks_email.TabIndex = 7;
@@ -204,7 +204,7 @@ namespace LibraryManagementSystem
             // 
             this.returnBooks_contact.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.returnBooks_contact.Location = new System.Drawing.Point(127, 133);
-            this.returnBooks_contact.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.returnBooks_contact.Margin = new System.Windows.Forms.Padding(4);
             this.returnBooks_contact.Name = "returnBooks_contact";
             this.returnBooks_contact.Size = new System.Drawing.Size(223, 26);
             this.returnBooks_contact.TabIndex = 5;
@@ -224,7 +224,7 @@ namespace LibraryManagementSystem
             // 
             this.returnBooks_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.returnBooks_name.Location = new System.Drawing.Point(127, 86);
-            this.returnBooks_name.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.returnBooks_name.Margin = new System.Windows.Forms.Padding(4);
             this.returnBooks_name.Name = "returnBooks_name";
             this.returnBooks_name.Size = new System.Drawing.Size(223, 26);
             this.returnBooks_name.TabIndex = 3;
@@ -244,7 +244,7 @@ namespace LibraryManagementSystem
             // 
             this.returnBooks_issueID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.returnBooks_issueID.Location = new System.Drawing.Point(127, 38);
-            this.returnBooks_issueID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.returnBooks_issueID.Margin = new System.Windows.Forms.Padding(4);
             this.returnBooks_issueID.Name = "returnBooks_issueID";
             this.returnBooks_issueID.Size = new System.Drawing.Size(223, 26);
             this.returnBooks_issueID.TabIndex = 1;
@@ -267,7 +267,7 @@ namespace LibraryManagementSystem
             this.panel2.Controls.Add(this.dataGridView1);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(416, 22);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(737, 647);
             this.panel2.TabIndex = 1;
@@ -289,7 +289,7 @@ namespace LibraryManagementSystem
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.Location = new System.Drawing.Point(25, 74);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -322,9 +322,10 @@ namespace LibraryManagementSystem
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ReturnBooks";
             this.Size = new System.Drawing.Size(1173, 695);
+            this.Load += new System.EventHandler(this.ReturnBooks_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

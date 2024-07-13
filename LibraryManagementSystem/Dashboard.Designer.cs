@@ -32,40 +32,40 @@ namespace LibraryManagementSystem
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.dashboard_RB = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
+            this.not_return_count = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.dashboard_member = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dashboard_IB = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dashboard_AB = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel7.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -113,6 +113,16 @@ namespace LibraryManagementSystem
             this.label8.Text = "0";
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::LibraryManagementSystem.Properties.Resources.calendar1;
+            this.pictureBox6.Location = new System.Drawing.Point(19, 29);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(80, 74);
+            this.pictureBox6.TabIndex = 1;
+            this.pictureBox6.TabStop = false;
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -151,6 +161,16 @@ namespace LibraryManagementSystem
             this.dashboard_RB.Text = "0";
             this.dashboard_RB.Click += new System.EventHandler(this.dashboard_RB_Click);
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::LibraryManagementSystem.Properties.Resources.icons8_book_60px_2;
+            this.pictureBox3.Location = new System.Drawing.Point(19, 46);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(80, 74);
+            this.pictureBox3.TabIndex = 1;
+            this.pictureBox3.TabStop = false;
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -166,7 +186,7 @@ namespace LibraryManagementSystem
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.OrangeRed;
-            this.panel6.Controls.Add(this.label5);
+            this.panel6.Controls.Add(this.not_return_count);
             this.panel6.Controls.Add(this.pictureBox5);
             this.panel6.Controls.Add(this.label7);
             this.panel6.Location = new System.Drawing.Point(416, 375);
@@ -175,17 +195,27 @@ namespace LibraryManagementSystem
             this.panel6.Size = new System.Drawing.Size(307, 117);
             this.panel6.TabIndex = 3;
             // 
-            // label5
+            // not_return_count
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(252, 62);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(37, 41);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "0";
+            this.not_return_count.AutoSize = true;
+            this.not_return_count.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.not_return_count.ForeColor = System.Drawing.Color.White;
+            this.not_return_count.Location = new System.Drawing.Point(252, 62);
+            this.not_return_count.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.not_return_count.Name = "not_return_count";
+            this.not_return_count.Size = new System.Drawing.Size(37, 41);
+            this.not_return_count.TabIndex = 2;
+            this.not_return_count.Text = "0";
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::LibraryManagementSystem.Properties.Resources.thumbs_down;
+            this.pictureBox5.Location = new System.Drawing.Point(19, 29);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(80, 74);
+            this.pictureBox5.TabIndex = 1;
+            this.pictureBox5.TabStop = false;
             // 
             // label7
             // 
@@ -224,6 +254,16 @@ namespace LibraryManagementSystem
             this.dashboard_member.Text = "0";
             this.dashboard_member.Click += new System.EventHandler(this.label2_Click);
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::LibraryManagementSystem.Properties.Resources.follower_2;
+            this.pictureBox4.Location = new System.Drawing.Point(19, 29);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(80, 74);
+            this.pictureBox4.TabIndex = 1;
+            this.pictureBox4.TabStop = false;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -259,6 +299,16 @@ namespace LibraryManagementSystem
             this.dashboard_IB.Size = new System.Drawing.Size(37, 41);
             this.dashboard_IB.TabIndex = 2;
             this.dashboard_IB.Text = "0";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::LibraryManagementSystem.Properties.Resources.icons8_books_60px_3;
+            this.pictureBox2.Location = new System.Drawing.Point(19, 46);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(80, 74);
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
             // 
             // label4
             // 
@@ -296,6 +346,16 @@ namespace LibraryManagementSystem
             this.dashboard_AB.TabIndex = 2;
             this.dashboard_AB.Text = "0";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::LibraryManagementSystem.Properties.Resources.icons8_book_stack_60px;
+            this.pictureBox1.Location = new System.Drawing.Point(19, 46);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(80, 74);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -307,66 +367,6 @@ namespace LibraryManagementSystem
             this.label1.Size = new System.Drawing.Size(150, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "Available Books";
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::LibraryManagementSystem.Properties.Resources.calendar1;
-            this.pictureBox6.Location = new System.Drawing.Point(19, 29);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(80, 74);
-            this.pictureBox6.TabIndex = 1;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::LibraryManagementSystem.Properties.Resources.icons8_book_60px_2;
-            this.pictureBox3.Location = new System.Drawing.Point(19, 46);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(80, 74);
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::LibraryManagementSystem.Properties.Resources.thumbs_down;
-            this.pictureBox5.Location = new System.Drawing.Point(19, 29);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(80, 74);
-            this.pictureBox5.TabIndex = 1;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::LibraryManagementSystem.Properties.Resources.follower_2;
-            this.pictureBox4.Location = new System.Drawing.Point(19, 29);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(80, 74);
-            this.pictureBox4.TabIndex = 1;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::LibraryManagementSystem.Properties.Resources.icons8_books_60px_3;
-            this.pictureBox2.Location = new System.Drawing.Point(19, 46);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(80, 74);
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::LibraryManagementSystem.Properties.Resources.icons8_book_stack_60px;
-            this.pictureBox1.Location = new System.Drawing.Point(19, 46);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(80, 74);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // Dashboard
             // 
@@ -380,21 +380,21 @@ namespace LibraryManagementSystem
             this.panel1.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -420,7 +420,7 @@ namespace LibraryManagementSystem
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label not_return_count;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel5;

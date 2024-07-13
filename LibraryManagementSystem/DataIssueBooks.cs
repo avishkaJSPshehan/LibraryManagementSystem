@@ -82,7 +82,7 @@ namespace LibraryManagementSystem
                 {
                     connect.Open();
 
-                    string selectData = "SELECT * FROM issues WHERE status = 'Not Return' AND date_delete IS NULL";
+                    string selectData = "SELECT * FROM issues WHERE status = 'Not Return'";
 
                     using (SqlCommand cmd = new SqlCommand(selectData, connect))
                     {
