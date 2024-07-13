@@ -1,5 +1,4 @@
-﻿
-namespace LibraryManagementSystem
+﻿namespace LibraryManagementSystem
 {
     partial class AddBooks
     {
@@ -107,9 +106,9 @@ namespace LibraryManagementSystem
             this.label1.Location = new System.Drawing.Point(20, 22);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(186, 29);
+            this.label1.Size = new System.Drawing.Size(108, 29);
             this.label1.TabIndex = 0;
-            this.label1.Text = "All Issued Books";
+            this.label1.Text = "All Books";
             // 
             // panel1
             // 

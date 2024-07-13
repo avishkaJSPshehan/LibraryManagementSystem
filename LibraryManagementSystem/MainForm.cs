@@ -44,8 +44,8 @@ namespace LibraryManagementSystem
         {
             dashboard1.Visible = true;
             addBooks1.Visible = false;
-            returnBooks1.Visible = false;
             issueBooks1.Visible = false;
+            returnBooks1.Visible = false;
             addMember1.Visible = false;
 
             Dashboard dForm = dashboard1 as Dashboard;
@@ -59,8 +59,8 @@ namespace LibraryManagementSystem
         {
             dashboard1.Visible = false;
             addBooks1.Visible = true;
-            returnBooks1.Visible = false;
             issueBooks1.Visible = false;
+            returnBooks1.Visible = false;
             addMember1.Visible = false;
 
             AddBooks aForm = addBooks1 as AddBooks;
@@ -69,16 +69,14 @@ namespace LibraryManagementSystem
                 aForm.refreshData();
             }
 
-            
-
         }
 
         private void issueBooks_btn_Click(object sender, EventArgs e)
         {
             dashboard1.Visible = false;
             addBooks1.Visible = false;
-            returnBooks1.Visible = false;
             issueBooks1.Visible = true;
+            returnBooks1.Visible = false;
             addMember1.Visible = false;
 
             ReturnBooks rForm = returnBooks1 as ReturnBooks;
@@ -92,8 +90,8 @@ namespace LibraryManagementSystem
         {
             dashboard1.Visible = false;
             addBooks1.Visible = false;
-            returnBooks1.Visible = true;
             issueBooks1.Visible = false;
+            returnBooks1.Visible = true;
             addMember1.Visible = false;
 
             IssueBooks iForm = issueBooks1 as IssueBooks;
@@ -114,8 +112,8 @@ namespace LibraryManagementSystem
         }
 
         private void dashboard1_Load(object sender, EventArgs e)
-        { 
-
+        {
+           
         }
 
         void bind_data()
@@ -136,8 +134,8 @@ namespace LibraryManagementSystem
         {
             dashboard1.Visible = false;
             addBooks1.Visible = false;
-            returnBooks1.Visible = false;
             issueBooks1.Visible = false;
+            returnBooks1.Visible = false;
             addMember1.Visible = true;
             bind_data();
 

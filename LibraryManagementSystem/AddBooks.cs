@@ -22,7 +22,16 @@ namespace LibraryManagementSystem
         {
             InitializeComponent();
 
-            displayBooks();
+            //displayBooks();
+            SqlConnection conn = new SqlConnection(connection_string);
+            SqlCommand comm = new SqlCommand("SELECT * FROM books", conn);
+            conn.Open();
+            SqlDataAdapter adpt = new SqlDataAdapter(comm);
+            DataTable dt = new DataTable();
+            dt.Clear();
+            adpt.Fill(dt);
+            dataGridView1.DataSource = dt;
+            conn.Close();
 
         }
 
@@ -34,7 +43,16 @@ namespace LibraryManagementSystem
                 return;
             }
 
-            displayBooks();
+            //displayBooks();
+            SqlConnection conn = new SqlConnection(connection_string);
+            SqlCommand comm = new SqlCommand("SELECT * FROM books", conn);
+            conn.Open();
+            SqlDataAdapter adpt = new SqlDataAdapter(comm);
+            DataTable dt = new DataTable();
+            dt.Clear();
+            adpt.Fill(dt);
+            dataGridView1.DataSource = dt;
+            conn.Close();
         }
 
         private String imagePath;
