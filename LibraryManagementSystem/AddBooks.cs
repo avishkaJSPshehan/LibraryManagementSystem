@@ -122,6 +122,15 @@ namespace LibraryManagementSystem
                             cmd.ExecuteNonQuery();
 
                             //displayBooks();
+                            SqlConnection conn = new SqlConnection(connection_string);
+                            SqlCommand comm = new SqlCommand("SELECT * FROM books", conn);
+                            conn.Open();
+                            SqlDataAdapter adpt = new SqlDataAdapter(comm);
+                            DataTable dt = new DataTable();
+                            dt.Clear();
+                            adpt.Fill(dt);
+                            dataGridView1.DataSource = dt;
+                            conn.Close();
 
                             MessageBox.Show("Added successfully!", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -215,7 +224,7 @@ namespace LibraryManagementSystem
                             connect.Open();
                             DateTime today = DateTime.Today;
                             string updateData = "UPDATE books SET book_title = @bookTitle" +
-                                ", author = @author, published_date = @published" +
+                                ", author = @author, published_data = @published" +
                                 ", status = @status, date_update = @dateUpdate WHERE id = @id";
 
                             using (SqlCommand cmd = new SqlCommand(updateData, connect))
@@ -229,7 +238,15 @@ namespace LibraryManagementSystem
 
                                 cmd.ExecuteNonQuery();
 
-                                displayBooks();
+                                SqlConnection conn = new SqlConnection(connection_string);
+                                SqlCommand comm = new SqlCommand("SELECT * FROM books", conn);
+                                conn.Open();
+                                SqlDataAdapter adpt = new SqlDataAdapter(comm);
+                                DataTable dt = new DataTable();
+                                dt.Clear();
+                                adpt.Fill(dt);
+                                dataGridView1.DataSource = dt;
+                                conn.Close();
 
                                 MessageBox.Show("Updated successfully!", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -288,7 +305,15 @@ namespace LibraryManagementSystem
 
                                 cmd.ExecuteNonQuery();
 
-                                displayBooks();
+                                SqlConnection conn = new SqlConnection(connection_string);
+                                SqlCommand comm = new SqlCommand("SELECT * FROM books", conn);
+                                conn.Open();
+                                SqlDataAdapter adpt = new SqlDataAdapter(comm);
+                                DataTable dt = new DataTable();
+                                dt.Clear();
+                                adpt.Fill(dt);
+                                dataGridView1.DataSource = dt;
+                                conn.Close();
 
                                 MessageBox.Show("Deleted successfully!", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
